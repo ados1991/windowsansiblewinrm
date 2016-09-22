@@ -168,3 +168,4 @@ if ($PSVersionTable.PSVersion.Major -lt 3)
 #FIrewall
 netsh advfirewall firewall add rule Profile=public name="Allow WinRM HTTPS" dir=in localport=5986 protocol=TCP action=allow
 Write-Verbose "PS Remoting successfully setup for Ansible"
+New-Item -ItemType Directory -Force -Path C:\Windows\System32\GroupPolicy\Machine\Scripts\Startup
